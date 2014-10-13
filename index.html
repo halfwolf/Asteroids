@@ -10,12 +10,13 @@
     <script src="lib/gameView.js"></script>
     <script src="lib/bullet.js"></script>
 
-    <canvas id="game-canvas" width="600" height="800"></canvas>
+    <canvas id="game-canvas" width="640" height="360"></canvas>
     <script>
       var canvas = document.getElementById("game-canvas");
       var ctx = canvas.getContext("2d");
+      var background = document.getElementById("background");
       var game = new Asteroids.Game();
-      var gameView = new Asteroids.GameView(game, ctx);
+      var gameView = new Asteroids.GameView(game, ctx, background);
       gameView.start();
     </script>
 
