@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<style>
+canvas {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+h1, h2, h3, h4, h5, h6 {
+  text-align: center;
+  font-family: sans-serif;
+}
+</style>
+  <body>
+    <script src="vendor/keymaster.js"></script>
+    <script src="lib/utils.js"></script>
+    <script src="lib/movingObject.js"></script>
+    <script src="lib/asteroid.js"></script>
+    <script src="lib/ship.js"></script>
+    <script src="lib/game.js"></script>
+    <script src="lib/gameView.js"></script>
+    <script src="lib/bullet.js"></script>
+    <h1> Rock Blaster </h1>
+    <h2 id="points">Rocks Blasted: 0</h2>
+    <canvas id="game-canvas" width="1000" height="600"></canvas>
+    <script>
+      var canvas = document.getElementById("game-canvas");
+      var ctx = canvas.getContext("2d");
+      var background = document.getElementById("background");
+      var pointsEl = document.getElementById("points");
+      var game = new Asteroids.Game();
+      var gameView = new Asteroids.GameView(game, ctx, background, pointsEl);
+      gameView.start();
+    </script>
+  </body>
+</html>
+
+<!--
+ background photo by Sweetie187 on flickr https://www.flickr.com/photos/58782395@N03/5519580228/in/photolist-9pKhUm-9pGgQg-9pGhd4-9pKiho-fmD5yt-3jHoLP-nZAvS6-8JKCMV-dEdPNR-dwqRuH-e7jWAT-54QqpD-3EDxMg-5FkwVe-88gywN-5SxPLy-dBKvNV-gDTY-9utjew-GXvEy-dcDkXc-9S6d4F-8GKPxh-dbg6Lb-JJoJP-9pGfXt-3jHoxV-arTA9D-n3TU3P-oqJoBY-g4he4w-6g3bZc-dvzkHq-79fmhX-p1cfPx-24JZWb-9pGgw8-3jMNTJ-dACVEE-bp6fuW-6guiuA-7uvgrr-8W3YYX-j8sQAc-3jMQeW-9jHnx4-8jpx2k-auc5vp-2miSSi-bBtFvB
+ ship by
+ asteroids by Pascal https://www.flickr.com/photos/pasukaru76/14950767825/in/photolist-oM9Ap4-8tzBGf-5i6ydB-8TWp2c-pP1SRx-3EFmMm-8tzBP7-dV1GTi-8tzC4f-9ishak-pPD1eg-85T6gv-abANmb-7HSMFm-6DEeoh-7HSMqs-7HSMgW-dC17GG-dJYFft-mvaZyi-85WfPd-85Tctr-85TdG8-8jhSi3-9977Ev-99adum-997bYX-99ai3m-9973Tn-99aiAU-99agc3-99afUw-9976TB-99afcw-99D5FR-99aks1-99ajNq-99GcVu-99GdrQ-85Wn1u-85T986-85WiE9-dK59ku-dK58W7-LLLCG-85Tcxe-4ULDCY-dJYTiM-dJYEqK-8KN5N5
+ -->
